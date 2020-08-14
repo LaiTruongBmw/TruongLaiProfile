@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="zxx">
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
   <!-- Required meta tags-->
   <meta charset="utf-8">
@@ -102,10 +101,10 @@
             <!-- Content part-->
             <div class="col-12 col-lg-7 about-content">
               <div class="content-block">
-                <h2 class="content-subtitle">Who am i?</h2>
+                <h2 class="content-subtitle">Who am I?</h2>
                 <h6 class="content-title">I'm Trương Lai, a Salesforce Developer</h6>
                 <div class="content-description">
-                  <p>I am a freelancer based in the Ho Chi Minh City and i have been building noteworthy UX/UI designs and websites for years, which comply with the latest design trends. I help convert a vision and an idea into meaningful and useful products. Having a sharp eye for product evolution helps me prioritize tasks, iterate fast and deliver faster.</p>
+                  <p>I am a Developer based in the Ho Chi Minh City and I have been building noteworthy UX/UI designs and websites for years, which comply with the latest design trends. I help convert a vision and an idea into meaningful and useful products. Having a sharp eye for product evolution helps me prioritize tasks, iterate fast and deliver faster.</p>
                 </div>
                 <address class="content-info">
                   <div class="row">
@@ -180,28 +179,27 @@
                   Work Place: FPT Software
                 </p>
                 <p class="service-description">
-                  Work Times: 2017 -2018
+                  Work Times: 2017 - 2018
                 </p>
               </div>
             </div>
             <!-- Single service-->
             <div class="col-12 col-md-6 col-lg-4">
               <div class="single-service mb-lg-0">
-                <i class="icon service-icon ion-logo-wordpress"></i>
-                <h6 class="service-title">Design Trends</h6>
+                <img src="img/dotnet.jpg" alt="About Picture">
+                <h6 class="service-title">ASP.Net Development</h6>
                 <p class="service-description">
-                  Work Place: 
+                  Work Place: TinvietSoft
                 </p>
                 <p class="service-description">
-                  Work Times: 
+                  Work Times: 2018 - 2019
                 </p>
               </div>
             </div>
             <!-- Single service-->
             <div class="col-12 col-md-6 col-lg-4">
               <div class="single-service mb-md-0">
-                <i class="icon service-icon ion-md-move"></i>
-                <!-- <img src="img/php.jpg" alt="About Picture"> -->
+                <img src="img/php.jpg" alt="About Picture">
                 <h6 class="service-title">PHP Development</h6>
                 <p class="service-description">
                   Work Place: Data E-Global
@@ -213,13 +211,14 @@
             </div>
             <!-- Single service-->
             <div class="col-12 col-md-6 col-lg-4">
-              <div class="single-service mb-0"><i class="icon service-icon ion-ios-rocket"></i>
-                <h6 class="service-title">Branding</h6>
+              <div class="single-service mb-0">
+                <img src="img/angular.jpg" alt="About Picture">
+                <h6 class="service-title">Angular Development</h6>
                 <p class="service-description">
-                  Work Place: 
+                  Work Place: FPT Polytechnic
                 </p>
                 <p class="service-description">
-                  Work Times: 
+                  Work Times: 2017 - 2018
                 </p>
               </div>
             </div>
@@ -646,13 +645,13 @@
           <div class="row">
             <!-- Contact form-->
             <div class="col-12">
-              <form class="contact-form" id="contact-form" action="http://exill.dk/demo/codex/template/php/contact.php">
+              <form class="contact-form" id="contact-form" action="">
                 <div class="row">
                   <div class="col-12 col-md-6 form-group"><input class="form-control" id="contact-name" type="text" name="name" placeholder="Name" required=""></div>
                   <div class="col-12 col-md-6 form-group"><input class="form-control" id="contact-email" type="email" name="email" placeholder="Email" required=""></div>
                   <div class="col-12 form-group"><input class="form-control" id="contact-subject" type="text" name="subject" placeholder="Subject" required=""></div>
                   <div class="col-12 form-group form-message"><textarea class="form-control" id="contact-message" name="message" placeholder="Message" rows="5" required=""></textarea></div>
-                  <div class="col-12 form-submit"><button class="btn button-main button-scheme" id="contact-submit" type="submit">Send message</button>
+                  <div class="col-12 form-submit"><button class="btn button-main button-scheme" id="contact-submit" type="submit" onclick = "sendEmail()">Send message</button>
                     <p class="contact-feedback"></p>
                   </div>
                 </div>
@@ -759,8 +758,13 @@
   <!-- removeIf(customizerDist)-->
   <script src="js/customizer/main.js"></script>
   <!-- endremoveIf(customizerDist)-->
+  <script type="text/javascript">
+    function sendEmail() {
+      var link = 'mailto:truonglai.bmw@gmail.com?subject=Message from '
+               +document.getElementById('contact-subject').value
+               +'&body='+document.getElementById('contact-message').value;
+      window.location.href = link;
+    }
+  </script>
 </body>
-
-
-<!-- Mirrored from exill.dk/demo/codex/template/particles.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 Jul 2020 09:15:34 GMT -->
 </html>

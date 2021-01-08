@@ -30,6 +30,8 @@
   <!-- removeIf(customizerDist)-->
   <link rel="stylesheet" href="css/customizer/main.css">
   <!-- endremoveIf(customizerDist)-->
+  <!-- Send mail service -->
+  <script src= "https://smtpjs.com/v3/smtp.js"> </script>
 </head>
 
 <body>
@@ -758,13 +760,21 @@
   <!-- removeIf(customizerDist)-->
   <script src="js/customizer/main.js"></script>
   <!-- endremoveIf(customizerDist)-->
-  <script type="text/javascript">
+  <script type="text/javascript"> 
     function sendEmail() {
-      var link = 'mailto:truonglai.bmw@gmail.com?subject=Message from '
-               +document.getElementById('contact-subject').value
-               +'&body='+document.getElementById('contact-message').value;
-      window.location.href = link;
-    }
+      Email.send({ 
+        Host: "smtp.gmail.com", 
+        Username: "truonglai.bmw@gmail.com", 
+        Password: "ahvdjxogwpqivwrw", 
+        To: 'truonglai.bmw@gmail.com', 
+        From: document.getElementById('contact-email').value, 
+        Subject: document.getElementById('contact-subject').value, 
+        Body: document.getElementById('contact-message').value, 
+      }) 
+      .then(function (message) { 
+        alert("mail sent successfully") 
+      }); 
+    } 
   </script>
 </body>
 </html>

@@ -764,7 +764,7 @@
     function sendEmail() {
       Email.send({ 
         Host: "smtp.gmail.com", 
-        Username: "truonglai.bmw@gmail.com", 
+        Username: document.getElementById('contact-name').value, 
         Password: "ahvdjxogwpqivwrw", 
         To: 'truonglai.bmw@gmail.com', 
         From: document.getElementById('contact-email').value, 
